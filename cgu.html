@@ -118,6 +118,9 @@ a{color:var(--gold);}
       <br><br>
       L'Éditeur se réserve le droit de modifier, suspendre ou interrompre l'accès à tout ou partie du service pour maintenance ou évolution, sans préavis ni indemnisation.
     </div>
+    <div class="highlight">
+      <strong>Absence de vérification des déclarations d'identité et de fonction :</strong> l'Éditeur n'a techniquement aucun moyen de vérifier qu'un utilisateur est réellement enseignant, qu'il exerce effectivement au sein de l'établissement déclaré, ni qu'il est réellement le directeur ou la directrice de l'école lorsqu'il accède à l'« espace directeur ». Ces accès reposent uniquement sur les déclarations faites par l'Enseignant lors de la configuration de l'application, sans possibilité de contrôle par l'Éditeur. En conséquence, l'Éditeur décline toute responsabilité en cas de fausse déclaration, d'usurpation de fonction ou d'usage frauduleux des outils réservés à l'espace directeur (signatures, cachets, validation de documents), et se réserve le droit de suspendre ou résilier l'accès de tout compte en cas de signalement ou de suspicion d'usage abusif. L'Enseignant demeure seul responsable de l'exactitude des informations déclarées et des conséquences, y compris disciplinaires ou légales, d'une fausse déclaration.
+    </div>
   </div>
 
   <!-- Art. 5 -->
@@ -129,7 +132,8 @@ a{color:var(--gold);}
         <li>Utiliser l'application exclusivement à des fins de gestion scolaire</li>
         <li>Effectuer régulièrement des sauvegardes (export JSON) de ses données</li>
         <li>Ne pas tenter de contourner ou désactiver le système de licence</li>
-        <li>Ne pas partager son code de licence avec des tiers non autorisés</li>
+        <li>Ne pas partager son code de licence avec des tiers non autorisés (chaque code étant nominatif et vérifié via l'infrastructure Firebase de l'Éditeur, il ne peut être utilisé simultanément par plusieurs utilisateurs)</li>
+        <li>Ne procéder à l'importation de l'image de signature et/ou de cachet du Directeur qu'avec l'autorisation expresse de celui-ci, et être en mesure de justifier cette autorisation en cas de besoin</li>
         <li>Ne pas procéder à de la décompilation ou de l'ingénierie inverse du code source</li>
         <li>Respecter la vie privée des élèves dont il gère les données</li>
         <li>Protéger l'accès à son appareil pour préserver la confidentialité des données des élèves</li>
@@ -145,7 +149,8 @@ a{color:var(--gold);}
       La responsabilité de l'Éditeur ne saurait être engagée en cas de :
       <ul>
         <li>Perte de données résultant d'une suppression du cache, d'un changement d'appareil ou d'une défaillance du navigateur</li>
-        <li>Inexactitudes dans les documents générés si les données saisies sont incorrectes</li>
+        <li>Inexactitudes dans les documents générés si les données saisies (notes, identités, appréciations, motifs d'absence, etc.) sont incorrectes ou erronées</li>
+        <li>Inexactitude des informations déclarées concernant l'identité, la fonction ou l'établissement de l'Enseignant</li>
         <li>Indisponibilité temporaire liée à un prestataire tiers (Cloudflare, Firebase, Chariow)</li>
         <li>Force majeure ou événement hors du contrôle raisonnable de l'Éditeur</li>
       </ul>
@@ -154,15 +159,28 @@ a{color:var(--gold);}
 
   <!-- Art. 7 -->
   <div class="doc-section">
-    <h2 class="section-title"><span class="section-num">7</span>Propriété intellectuelle</h2>
+    <h2 class="section-title"><span class="section-num">7</span>Nature des documents générés</h2>
     <div class="doc-card">
-      L'ensemble du code source, des interfaces, des algorithmes et des contenus de l'application sont la propriété exclusive de <strong>Wendpanga Digital SAS</strong>. Toute reproduction, modification ou exploitation commerciale sans autorisation écrite préalable est interdite.
+      Les documents produits par l'application (bulletins, certificats, cartes scolaires, convocations, etc.) sont générés automatiquement à partir des informations saisies par l'Enseignant. Leur mise en forme a été conçue pour ressembler autant que possible, dans sa présentation, aux modèles habituellement utilisés dans le système éducatif burkinabè.
+      <br><br>
+      <strong>L'Éditeur n'a toutefois jamais présenté ni garanti ces documents comme étant des documents officiels.</strong> Leur valeur administrative, juridique ou probante relève exclusivement de la validation, de la signature et du cachet des autorités scolaires compétentes (directeur d'établissement, inspection, ministère), et non de l'application elle-même. Il appartient à l'Enseignant et à l'établissement de s'assurer que l'usage de ces documents est conforme à la réglementation scolaire en vigueur.
+    </div>
+    <div class="highlight">
+      <strong>Signature et cachet importés dans l'application :</strong> l'application permet à l'Enseignant d'importer une image de la signature et/ou du cachet du Directeur afin de l'apposer automatiquement sur certains documents générés. L'Éditeur n'a aucun moyen de vérifier que cette image a été obtenue avec l'autorisation du Directeur concerné, ni qu'elle n'est pas utilisée de manière abusive. L'importation et l'usage de ces éléments relèvent de l'entière responsabilité de l'Enseignant qui les insère. L'Éditeur décline toute responsabilité en cas d'usage non autorisé, frauduleux ou falsifié d'une signature ou d'un cachet via l'application, et se réserve le droit de suspendre l'accès de tout compte en cas de signalement en ce sens.
     </div>
   </div>
 
   <!-- Art. 8 -->
   <div class="doc-section">
-    <h2 class="section-title"><span class="section-num">8</span>Droit applicable et juridiction</h2>
+    <h2 class="section-title"><span class="section-num">8</span>Propriété intellectuelle</h2>
+    <div class="doc-card">
+      L'ensemble du code source, des interfaces, des algorithmes et des contenus de l'application sont la propriété exclusive de <strong>Wendpanga Digital SAS</strong>. Toute reproduction, modification ou exploitation commerciale sans autorisation écrite préalable est interdite.
+    </div>
+  </div>
+
+  <!-- Art. 9 -->
+  <div class="doc-section">
+    <h2 class="section-title"><span class="section-num">9</span>Droit applicable et juridiction</h2>
     <div class="doc-card">
       Les présentes CGU sont soumises au <strong>droit burkinabè</strong>. En cas de litige, une tentative de résolution amiable sera menée avant toute saisine judiciaire. Les tribunaux compétents de <strong>Ouagadougou</strong> seront seuls compétents.
     </div>
