@@ -46,6 +46,18 @@ tr:last-child td{border-bottom:none;}
 .footer-links a{font-size:12px;color:var(--text3);text-decoration:none;padding:4px 10px;border-radius:16px;transition:color .2s;}
 .footer-links a:hover{color:var(--gold);}
 .footer-copy{font-size:11px;color:var(--text3);line-height:1.8;}
+
+/* Tableaux adaptés aux écrans de smartphone : chaque ligne devient une fiche empilée */
+td{overflow-wrap:anywhere;word-break:normal;}
+.tag-local,.tag-server{max-width:100%;white-space:normal;line-height:1.4;}
+@media (max-width:640px){
+  table,tbody,tr,td{display:block;width:100%;}
+  thead{display:none;}
+  tr{padding:10px 14px;border-bottom:1px solid var(--border);}
+  tr:last-child{border-bottom:none;}
+  td{padding:3px 0;border:none;font-size:13px;}
+  td::before{content:attr(data-label);display:block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--gold);margin-bottom:1px;}
+}
 </style>
 </head>
 <body>
@@ -110,69 +122,69 @@ tr:last-child td{border-bottom:none;}
         </thead>
         <tbody>
           <tr>
-            <td><strong>Identité élèves</strong></td>
-            <td>Nom, prénom, date de naissance, genre, nationalité, matricule</td>
-            <td><span class="tag-local">📱 Appareil uniquement</span></td>
+            <td data-label="Catégorie"><strong>Identité élèves</strong></td>
+            <td data-label="Données">Nom, prénom, date de naissance, genre, nationalité, matricule</td>
+            <td data-label="Localisation"><span class="tag-local">📱 Appareil uniquement</span></td>
           </tr>
           <tr>
-            <td><strong>Photos des élèves</strong></td>
-            <td>Photographies ajoutées par l'Enseignant aux fiches (appareil photo ou galerie)</td>
-            <td><span class="tag-local">📱 Appareil uniquement</span></td>
+            <td data-label="Catégorie"><strong>Photos des élèves</strong></td>
+            <td data-label="Données">Photographies ajoutées par l'Enseignant aux fiches (appareil photo ou galerie)</td>
+            <td data-label="Localisation"><span class="tag-local">📱 Appareil uniquement</span></td>
           </tr>
           <tr>
-            <td><strong>Données pédagogiques</strong></td>
-            <td>Notes, moyennes, classements, bulletins, appréciations</td>
-            <td><span class="tag-local">📱 Appareil uniquement</span></td>
+            <td data-label="Catégorie"><strong>Données pédagogiques</strong></td>
+            <td data-label="Données">Notes, moyennes, classements, bulletins, appréciations</td>
+            <td data-label="Localisation"><span class="tag-local">📱 Appareil uniquement</span></td>
           </tr>
           <tr>
-            <td><strong>Absences</strong></td>
-            <td>Présence/absence par demi-journée, type (justifiée/non)</td>
-            <td><span class="tag-local">📱 Appareil uniquement</span></td>
+            <td data-label="Catégorie"><strong>Absences</strong></td>
+            <td data-label="Données">Présence/absence par demi-journée, type (justifiée/non)</td>
+            <td data-label="Localisation"><span class="tag-local">📱 Appareil uniquement</span></td>
           </tr>
           <tr>
-            <td><strong>Données familiales</strong></td>
-            <td>Nom père, nom mère, téléphone des parents/tuteurs</td>
-            <td><span class="tag-local">📱 Appareil uniquement</span></td>
+            <td data-label="Catégorie"><strong>Données familiales</strong></td>
+            <td data-label="Données">Nom père, nom mère, téléphone des parents/tuteurs</td>
+            <td data-label="Localisation"><span class="tag-local">📱 Appareil uniquement</span></td>
           </tr>
           <tr>
-            <td><strong>Profil enseignant</strong></td>
-            <td>Nom, grade, fonction, images de signature, de cachet et d'emblème importées</td>
-            <td><span class="tag-local">📱 Appareil uniquement</span></td>
+            <td data-label="Catégorie"><strong>Profil enseignant</strong></td>
+            <td data-label="Données">Nom, grade, fonction, images de signature, de cachet et d'emblème importées</td>
+            <td data-label="Localisation"><span class="tag-local">📱 Appareil uniquement</span></td>
           </tr>
           <tr>
-            <td><strong>Compte SmartClass</strong></td>
-            <td>Adresse e-mail, identifiant de compte, état de vérification de l'e-mail</td>
-            <td><span class="tag-server">☁️ Appareil et serveur éditeur</span></td>
+            <td data-label="Catégorie"><strong>Compte SmartClass</strong></td>
+            <td data-label="Données">Adresse e-mail, identifiant de compte, état de vérification de l'e-mail</td>
+            <td data-label="Localisation"><span class="tag-server">☁️ Appareil et serveur éditeur</span></td>
           </tr>
           <tr>
-            <td><strong>Licence</strong></td>
-            <td>Code de licence, niveau, date d'expiration, état (actif/révoqué), compte ayant activé le code</td>
-            <td><span class="tag-server">☁️ Appareil et Firebase</span></td>
+            <td data-label="Catégorie"><strong>Licence</strong></td>
+            <td data-label="Données">Code de licence, niveau, date d'expiration, état (actif/révoqué), compte ayant activé le code</td>
+            <td data-label="Localisation"><span class="tag-server">☁️ Appareil et Firebase</span></td>
           </tr>
           <tr>
-            <td><strong>Statistiques liées au compte</strong></td>
-            <td>Effectifs agrégés (nombre d'élèves, filles/garçons, niveaux de classe, arrivées/départs/abandons), établissement, circonscription (CEB), année scolaire, niveau de licence, version de l'application, date de dernière synchronisation — rattachés au compte. <strong>Aucun nom d'élève.</strong></td>
-            <td><span class="tag-server">☁️ Serveur éditeur (Firebase)</span></td>
+            <td data-label="Catégorie"><strong>Statistiques liées au compte</strong></td>
+            <td data-label="Données">Effectifs agrégés (nombre d'élèves, filles/garçons, niveaux de classe, arrivées/départs/abandons), établissement, circonscription (CEB), année scolaire, niveau de licence, version de l'application, date de dernière synchronisation — rattachés au compte. <strong>Aucun nom d'élève.</strong></td>
+            <td data-label="Localisation"><span class="tag-server">☁️ Serveur éditeur (Firebase)</span></td>
           </tr>
           <tr>
-            <td><strong>Messages de support</strong></td>
-            <td>Contenu du message, établissement, province, identifiant de compte, informations de licence</td>
-            <td><span class="tag-server">☁️ Serveur éditeur (Firebase)</span></td>
+            <td data-label="Catégorie"><strong>Messages de support</strong></td>
+            <td data-label="Données">Contenu du message, établissement, province, identifiant de compte, informations de licence</td>
+            <td data-label="Localisation"><span class="tag-server">☁️ Serveur éditeur (Firebase)</span></td>
           </tr>
           <tr>
-            <td><strong>Données d'achat</strong></td>
-            <td>Nom, téléphone, référence de transaction (via Chariow)</td>
-            <td><span class="tag-server">☁️ Chariow / Firebase</span></td>
+            <td data-label="Catégorie"><strong>Données d'achat</strong></td>
+            <td data-label="Données">Nom, téléphone, référence de transaction (via Chariow)</td>
+            <td data-label="Localisation"><span class="tag-server">☁️ Chariow / Firebase</span></td>
           </tr>
           <tr>
-            <td><strong>Vérification de version</strong></td>
-            <td>Adresse IP et informations techniques de connexion visibles par l'hébergeur du fichier de version (GitHub Pages)</td>
-            <td><span class="tag-server">☁️ GitHub Pages</span></td>
+            <td data-label="Catégorie"><strong>Vérification de version</strong></td>
+            <td data-label="Données">Adresse IP et informations techniques de connexion visibles par l'hébergeur du fichier de version (GitHub Pages)</td>
+            <td data-label="Localisation"><span class="tag-server">☁️ GitHub Pages</span></td>
           </tr>
           <tr>
-            <td><strong>Audience</strong></td>
-            <td>Statistiques de navigation anonymisées (Cloudflare Insights)</td>
-            <td><span class="tag-server">☁️ Cloudflare (anonyme)</span></td>
+            <td data-label="Catégorie"><strong>Audience</strong></td>
+            <td data-label="Données">Statistiques de navigation anonymisées (Cloudflare Insights)</td>
+            <td data-label="Localisation"><span class="tag-server">☁️ Cloudflare (anonyme)</span></td>
           </tr>
         </tbody>
       </table>
@@ -214,10 +226,10 @@ tr:last-child td{border-bottom:none;}
           <tr><th>Prestataire</th><th>Rôle</th><th>Localisation</th></tr>
         </thead>
         <tbody>
-          <tr><td><strong>Chariow</strong></td><td>Vente de licences, paiement</td><td>Afrique de l'Ouest</td></tr>
-          <tr><td><strong>Firebase (Google)</strong></td><td>Gestion des codes de licence, comptes, statistiques et messages de support</td><td>Serveurs Google</td></tr>
-          <tr><td><strong>Cloudflare</strong></td><td>Hébergement CDN, audience anonyme</td><td>Réseau mondial</td></tr>
-          <tr><td><strong>GitHub (GitHub Pages)</strong></td><td>Hébergement de la page de téléchargement et du fichier de version</td><td>Serveurs GitHub</td></tr>
+          <tr><td data-label="Prestataire"><strong>Chariow</strong></td><td data-label="Rôle">Vente de licences, paiement</td><td data-label="Localisation">Afrique de l'Ouest</td></tr>
+          <tr><td data-label="Prestataire"><strong>Firebase (Google)</strong></td><td data-label="Rôle">Gestion des codes de licence, comptes, statistiques et messages de support</td><td data-label="Localisation">Serveurs Google</td></tr>
+          <tr><td data-label="Prestataire"><strong>Cloudflare</strong></td><td data-label="Rôle">Hébergement CDN, audience anonyme</td><td data-label="Localisation">Réseau mondial</td></tr>
+          <tr><td data-label="Prestataire"><strong>GitHub (GitHub Pages)</strong></td><td data-label="Rôle">Hébergement de la page de téléchargement et du fichier de version</td><td data-label="Localisation">Serveurs GitHub</td></tr>
         </tbody>
       </table>
     </div>
@@ -236,10 +248,10 @@ tr:last-child td{border-bottom:none;}
           <tr><th>Données</th><th>Durée</th></tr>
         </thead>
         <tbody>
-          <tr><td>Données élèves (stockage local)</td><td>Jusqu'à suppression manuelle par l'Enseignant</td></tr>
-          <tr><td>Compte et statistiques liées au compte</td><td>Tant que le compte est actif, puis suppression sur demande, sous réserve des obligations applicables</td></tr>
-          <tr><td>Données de licence / transaction (Firebase)</td><td>10 ans (obligations comptables)</td></tr>
-          <tr><td>Audience Cloudflare</td><td>30 jours maximum</td></tr>
+          <tr><td data-label="Données">Données élèves (stockage local)</td><td data-label="Durée">Jusqu'à suppression manuelle par l'Enseignant</td></tr>
+          <tr><td data-label="Données">Compte et statistiques liées au compte</td><td data-label="Durée">Tant que le compte est actif, puis suppression sur demande, sous réserve des obligations applicables</td></tr>
+          <tr><td data-label="Données">Données de licence / transaction (Firebase)</td><td data-label="Durée">10 ans (obligations comptables)</td></tr>
+          <tr><td data-label="Données">Audience Cloudflare</td><td data-label="Durée">30 jours maximum</td></tr>
         </tbody>
       </table>
     </div>
@@ -301,4 +313,5 @@ tr:last-child td{border-bottom:none;}
 
 </div>
 </body>
-</html>
+  </html>
+              
